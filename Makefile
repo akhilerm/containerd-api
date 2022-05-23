@@ -164,7 +164,6 @@ protos: bin/protoc-gen-go-fieldpath
 	@find . -path ./vendor -prune -false -o -name '*.pb.go' | xargs rm
 	$(eval TMPDIR := $(shell mktemp -d))
 #	@mv ${ROOTDIR}/vendor ${TMPDIR}
-	@echo "api packages" ${API_PACKAGES}
 	@(cd ${ROOTDIR}/api && PATH="${ROOTDIR}/bin:${PATH}" protobuild --quiet ${API_PACKAGES})
 	@(PATH="${ROOTDIR}/bin:${PATH}" protobuild --quiet ${NON_API_PACKAGES})
 #	@mv ${TMPDIR}/vendor ${ROOTDIR}
