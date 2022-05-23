@@ -22,7 +22,3 @@ require (
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
-
-// When updating replace rules, make sure to also update the rules in integration/client/go.mod and api/go.mod
-// urfave/cli must be <= v1.22.1 due to a regression: https://github.com/urfave/cli/issues/1092
-replace github.com/urfave/cli => github.com/urfave/cli v1.22.1
