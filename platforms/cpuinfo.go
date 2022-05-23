@@ -24,8 +24,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/containerd/containerd/errdefs"
-	"github.com/containerd/containerd/log"
+	"github.com/containerd/containerd-api/errdefs"
 )
 
 // Present the ARM instruction set architecture, eg: v7, v8
@@ -97,7 +96,6 @@ func getCPUVariant() string {
 
 	variant, err := getCPUInfo("Cpu architecture")
 	if err != nil {
-		log.L.WithError(err).Error("failure getting variant")
 		return ""
 	}
 
