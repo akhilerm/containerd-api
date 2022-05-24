@@ -47,7 +47,7 @@ type Container struct {
 	// ID is the user-specified identifier.
 	//
 	// This field may not be updated.
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// Labels provides an area to include arbitrary data on containers.
 	//
 	// The combined size of a key/value pair cannot exceed 4096 bytes.
@@ -127,9 +127,9 @@ func (*Container) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_containers_v1_containers_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Container) GetId() string {
+func (x *Container) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -209,7 +209,7 @@ type GetContainerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *GetContainerRequest) Reset() {
@@ -244,9 +244,9 @@ func (*GetContainerRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_containers_v1_containers_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *GetContainerRequest) GetId() string {
+func (x *GetContainerRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -613,7 +613,7 @@ type DeleteContainerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *DeleteContainerRequest) Reset() {
@@ -648,9 +648,9 @@ func (*DeleteContainerRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_containers_v1_containers_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *DeleteContainerRequest) GetId() string {
+func (x *DeleteContainerRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

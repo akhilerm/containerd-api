@@ -49,7 +49,7 @@ type Plugin struct {
 	// define their own values during registration.
 	Type string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
 	// ID identifies the plugin uniquely in the system.
-	Id string `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
 	// Requires lists the plugin types required by this plugin.
 	Requires []string `protobuf:"bytes,3,rep,name=requires,proto3" json:"requires,omitempty"`
 	// Platforms enumerates the platforms this plugin will support.
@@ -121,9 +121,9 @@ func (x *Plugin) GetType() string {
 	return ""
 }
 
-func (x *Plugin) GetId() string {
+func (x *Plugin) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -272,7 +272,7 @@ type ServerResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	UUID string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
 }
 
 func (x *ServerResponse) Reset() {
@@ -307,9 +307,9 @@ func (*ServerResponse) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_introspection_v1_introspection_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *ServerResponse) GetUuid() string {
+func (x *ServerResponse) GetUUID() string {
 	if x != nil {
-		return x.Uuid
+		return x.UUID
 	}
 	return ""
 }

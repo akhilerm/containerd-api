@@ -45,7 +45,7 @@ type CreateTaskRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id               string         `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID               string         `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Bundle           string         `protobuf:"bytes,2,opt,name=bundle,proto3" json:"bundle,omitempty"`
 	Rootfs           []*types.Mount `protobuf:"bytes,3,rep,name=rootfs,proto3" json:"rootfs,omitempty"`
 	Terminal         bool           `protobuf:"varint,4,opt,name=terminal,proto3" json:"terminal,omitempty"`
@@ -89,9 +89,9 @@ func (*CreateTaskRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *CreateTaskRequest) GetId() string {
+func (x *CreateTaskRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -211,8 +211,8 @@ type DeleteRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *DeleteRequest) Reset() {
@@ -247,16 +247,16 @@ func (*DeleteRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *DeleteRequest) GetId() string {
+func (x *DeleteRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *DeleteRequest) GetExecId() string {
+func (x *DeleteRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -329,8 +329,8 @@ type ExecProcessRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId   string     `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID       string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID   string     `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 	Terminal bool       `protobuf:"varint,3,opt,name=terminal,proto3" json:"terminal,omitempty"`
 	Stdin    string     `protobuf:"bytes,4,opt,name=stdin,proto3" json:"stdin,omitempty"`
 	Stdout   string     `protobuf:"bytes,5,opt,name=stdout,proto3" json:"stdout,omitempty"`
@@ -370,16 +370,16 @@ func (*ExecProcessRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *ExecProcessRequest) GetId() string {
+func (x *ExecProcessRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *ExecProcessRequest) GetExecId() string {
+func (x *ExecProcessRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -462,8 +462,8 @@ type ResizePtyRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 	Width  uint32 `protobuf:"varint,3,opt,name=width,proto3" json:"width,omitempty"`
 	Height uint32 `protobuf:"varint,4,opt,name=height,proto3" json:"height,omitempty"`
 }
@@ -500,16 +500,16 @@ func (*ResizePtyRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *ResizePtyRequest) GetId() string {
+func (x *ResizePtyRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *ResizePtyRequest) GetExecId() string {
+func (x *ResizePtyRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -533,8 +533,8 @@ type StateRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *StateRequest) Reset() {
@@ -569,16 +569,16 @@ func (*StateRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *StateRequest) GetId() string {
+func (x *StateRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *StateRequest) GetExecId() string {
+func (x *StateRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -588,7 +588,7 @@ type StateResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id         string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID         string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Bundle     string                 `protobuf:"bytes,2,opt,name=bundle,proto3" json:"bundle,omitempty"`
 	Pid        uint32                 `protobuf:"varint,3,opt,name=pid,proto3" json:"pid,omitempty"`
 	Status     task.Status            `protobuf:"varint,4,opt,name=status,proto3,enum=containerd.v1.types.Status" json:"status,omitempty"`
@@ -598,7 +598,7 @@ type StateResponse struct {
 	Terminal   bool                   `protobuf:"varint,8,opt,name=terminal,proto3" json:"terminal,omitempty"`
 	ExitStatus uint32                 `protobuf:"varint,9,opt,name=exit_status,json=exitStatus,proto3" json:"exit_status,omitempty"`
 	ExitedAt   *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=exited_at,json=exitedAt,proto3" json:"exited_at,omitempty"`
-	ExecId     string                 `protobuf:"bytes,11,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ExecID     string                 `protobuf:"bytes,11,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *StateResponse) Reset() {
@@ -633,9 +633,9 @@ func (*StateResponse) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *StateResponse) GetId() string {
+func (x *StateResponse) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -703,9 +703,9 @@ func (x *StateResponse) GetExitedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *StateResponse) GetExecId() string {
+func (x *StateResponse) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -715,8 +715,8 @@ type KillRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 	Signal uint32 `protobuf:"varint,3,opt,name=signal,proto3" json:"signal,omitempty"`
 	All    bool   `protobuf:"varint,4,opt,name=all,proto3" json:"all,omitempty"`
 }
@@ -753,16 +753,16 @@ func (*KillRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *KillRequest) GetId() string {
+func (x *KillRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *KillRequest) GetExecId() string {
+func (x *KillRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -786,8 +786,8 @@ type CloseIORequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 	Stdin  bool   `protobuf:"varint,3,opt,name=stdin,proto3" json:"stdin,omitempty"`
 }
 
@@ -823,16 +823,16 @@ func (*CloseIORequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{10}
 }
 
-func (x *CloseIORequest) GetId() string {
+func (x *CloseIORequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *CloseIORequest) GetExecId() string {
+func (x *CloseIORequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -849,7 +849,7 @@ type PidsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *PidsRequest) Reset() {
@@ -884,9 +884,9 @@ func (*PidsRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *PidsRequest) GetId() string {
+func (x *PidsRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -943,7 +943,7 @@ type CheckpointTaskRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id      string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID      string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Path    string     `protobuf:"bytes,2,opt,name=path,proto3" json:"path,omitempty"`
 	Options *anypb.Any `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
 }
@@ -980,9 +980,9 @@ func (*CheckpointTaskRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{13}
 }
 
-func (x *CheckpointTaskRequest) GetId() string {
+func (x *CheckpointTaskRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1006,7 +1006,7 @@ type UpdateTaskRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id          string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID          string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Resources   *anypb.Any        `protobuf:"bytes,2,opt,name=resources,proto3" json:"resources,omitempty"`
 	Annotations map[string]string `protobuf:"bytes,3,rep,name=annotations,proto3" json:"annotations,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
@@ -1043,9 +1043,9 @@ func (*UpdateTaskRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{14}
 }
 
-func (x *UpdateTaskRequest) GetId() string {
+func (x *UpdateTaskRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1069,8 +1069,8 @@ type StartRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *StartRequest) Reset() {
@@ -1105,16 +1105,16 @@ func (*StartRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{15}
 }
 
-func (x *StartRequest) GetId() string {
+func (x *StartRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *StartRequest) GetExecId() string {
+func (x *StartRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -1171,8 +1171,8 @@ type WaitRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ExecId string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ID     string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ExecID string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *WaitRequest) Reset() {
@@ -1207,16 +1207,16 @@ func (*WaitRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{17}
 }
 
-func (x *WaitRequest) GetId() string {
+func (x *WaitRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
 
-func (x *WaitRequest) GetExecId() string {
+func (x *WaitRequest) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -1281,7 +1281,7 @@ type StatsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *StatsRequest) Reset() {
@@ -1316,9 +1316,9 @@ func (*StatsRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{19}
 }
 
-func (x *StatsRequest) GetId() string {
+func (x *StatsRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1375,7 +1375,7 @@ type ConnectRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *ConnectRequest) Reset() {
@@ -1410,9 +1410,9 @@ func (*ConnectRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{21}
 }
 
-func (x *ConnectRequest) GetId() string {
+func (x *ConnectRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1485,7 +1485,7 @@ type ShutdownRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id  string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID  string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Now bool   `protobuf:"varint,2,opt,name=now,proto3" json:"now,omitempty"`
 }
 
@@ -1521,9 +1521,9 @@ func (*ShutdownRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{23}
 }
 
-func (x *ShutdownRequest) GetId() string {
+func (x *ShutdownRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1540,7 +1540,7 @@ type PauseRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *PauseRequest) Reset() {
@@ -1575,9 +1575,9 @@ func (*PauseRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{24}
 }
 
-func (x *PauseRequest) GetId() string {
+func (x *PauseRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -1587,7 +1587,7 @@ type ResumeRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *ResumeRequest) Reset() {
@@ -1622,9 +1622,9 @@ func (*ResumeRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_task_v2_shim_proto_rawDescGZIP(), []int{25}
 }
 
-func (x *ResumeRequest) GetId() string {
+func (x *ResumeRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

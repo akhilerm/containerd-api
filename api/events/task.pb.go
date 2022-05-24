@@ -43,10 +43,10 @@ type TaskCreate struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string         `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string         `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 	Bundle      string         `protobuf:"bytes,2,opt,name=bundle,proto3" json:"bundle,omitempty"`
 	Rootfs      []*types.Mount `protobuf:"bytes,3,rep,name=rootfs,proto3" json:"rootfs,omitempty"`
-	Io          *TaskIO        `protobuf:"bytes,4,opt,name=io,proto3" json:"io,omitempty"`
+	IO          *TaskIO        `protobuf:"bytes,4,opt,name=io,proto3" json:"io,omitempty"`
 	Checkpoint  string         `protobuf:"bytes,5,opt,name=checkpoint,proto3" json:"checkpoint,omitempty"`
 	Pid         uint32         `protobuf:"varint,6,opt,name=pid,proto3" json:"pid,omitempty"`
 }
@@ -83,9 +83,9 @@ func (*TaskCreate) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *TaskCreate) GetContainerId() string {
+func (x *TaskCreate) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -104,9 +104,9 @@ func (x *TaskCreate) GetRootfs() []*types.Mount {
 	return nil
 }
 
-func (x *TaskCreate) GetIo() *TaskIO {
+func (x *TaskCreate) GetIO() *TaskIO {
 	if x != nil {
-		return x.Io
+		return x.IO
 	}
 	return nil
 }
@@ -130,7 +130,7 @@ type TaskStart struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 	Pid         uint32 `protobuf:"varint,2,opt,name=pid,proto3" json:"pid,omitempty"`
 }
 
@@ -166,9 +166,9 @@ func (*TaskStart) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *TaskStart) GetContainerId() string {
+func (x *TaskStart) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -185,13 +185,13 @@ type TaskDelete struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 	Pid         uint32                 `protobuf:"varint,2,opt,name=pid,proto3" json:"pid,omitempty"`
 	ExitStatus  uint32                 `protobuf:"varint,3,opt,name=exit_status,json=exitStatus,proto3" json:"exit_status,omitempty"`
 	ExitedAt    *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=exited_at,json=exitedAt,proto3" json:"exited_at,omitempty"`
 	// id is the specific exec. By default if omitted will be `""` thus matches
 	// the init exec of the task matching `container_id`.
-	Id string `protobuf:"bytes,5,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,5,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *TaskDelete) Reset() {
@@ -226,9 +226,9 @@ func (*TaskDelete) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *TaskDelete) GetContainerId() string {
+func (x *TaskDelete) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -254,9 +254,9 @@ func (x *TaskDelete) GetExitedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *TaskDelete) GetId() string {
+func (x *TaskDelete) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -337,8 +337,8 @@ type TaskExit struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
-	Id          string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	ContainerID string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ID          string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
 	Pid         uint32                 `protobuf:"varint,3,opt,name=pid,proto3" json:"pid,omitempty"`
 	ExitStatus  uint32                 `protobuf:"varint,4,opt,name=exit_status,json=exitStatus,proto3" json:"exit_status,omitempty"`
 	ExitedAt    *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=exited_at,json=exitedAt,proto3" json:"exited_at,omitempty"`
@@ -376,16 +376,16 @@ func (*TaskExit) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *TaskExit) GetContainerId() string {
+func (x *TaskExit) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
 
-func (x *TaskExit) GetId() string {
+func (x *TaskExit) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -416,7 +416,7 @@ type TaskOOM struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 }
 
 func (x *TaskOOM) Reset() {
@@ -451,9 +451,9 @@ func (*TaskOOM) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *TaskOOM) GetContainerId() string {
+func (x *TaskOOM) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -463,8 +463,8 @@ type TaskExecAdded struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
-	ExecId      string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ExecID      string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 }
 
 func (x *TaskExecAdded) Reset() {
@@ -499,16 +499,16 @@ func (*TaskExecAdded) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *TaskExecAdded) GetContainerId() string {
+func (x *TaskExecAdded) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
 
-func (x *TaskExecAdded) GetExecId() string {
+func (x *TaskExecAdded) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -518,8 +518,8 @@ type TaskExecStarted struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
-	ExecId      string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ExecID      string `protobuf:"bytes,2,opt,name=exec_id,json=execId,proto3" json:"exec_id,omitempty"`
 	Pid         uint32 `protobuf:"varint,3,opt,name=pid,proto3" json:"pid,omitempty"`
 }
 
@@ -555,16 +555,16 @@ func (*TaskExecStarted) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *TaskExecStarted) GetContainerId() string {
+func (x *TaskExecStarted) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
 
-func (x *TaskExecStarted) GetExecId() string {
+func (x *TaskExecStarted) GetExecID() string {
 	if x != nil {
-		return x.ExecId
+		return x.ExecID
 	}
 	return ""
 }
@@ -581,7 +581,7 @@ type TaskPaused struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 }
 
 func (x *TaskPaused) Reset() {
@@ -616,9 +616,9 @@ func (*TaskPaused) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *TaskPaused) GetContainerId() string {
+func (x *TaskPaused) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -628,7 +628,7 @@ type TaskResumed struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 }
 
 func (x *TaskResumed) Reset() {
@@ -663,9 +663,9 @@ func (*TaskResumed) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *TaskResumed) GetContainerId() string {
+func (x *TaskResumed) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
@@ -675,7 +675,7 @@ type TaskCheckpointed struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ContainerID string `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
 	Checkpoint  string `protobuf:"bytes,2,opt,name=checkpoint,proto3" json:"checkpoint,omitempty"`
 }
 
@@ -711,9 +711,9 @@ func (*TaskCheckpointed) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_task_proto_rawDescGZIP(), []int{10}
 }
 
-func (x *TaskCheckpointed) GetContainerId() string {
+func (x *TaskCheckpointed) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }

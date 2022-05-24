@@ -100,8 +100,8 @@ type Process struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ContainerId string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
-	Id          string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	ContainerID string                 `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	ID          string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
 	Pid         uint32                 `protobuf:"varint,3,opt,name=pid,proto3" json:"pid,omitempty"`
 	Status      Status                 `protobuf:"varint,4,opt,name=status,proto3,enum=containerd.v1.types.Status" json:"status,omitempty"`
 	Stdin       string                 `protobuf:"bytes,5,opt,name=stdin,proto3" json:"stdin,omitempty"`
@@ -144,16 +144,16 @@ func (*Process) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_types_task_task_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Process) GetContainerId() string {
+func (x *Process) GetContainerID() string {
 	if x != nil {
-		return x.ContainerId
+		return x.ContainerID
 	}
 	return ""
 }
 
-func (x *Process) GetId() string {
+func (x *Process) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

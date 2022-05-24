@@ -42,7 +42,7 @@ type ContainerCreate struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id      string                   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID      string                   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Image   string                   `protobuf:"bytes,2,opt,name=image,proto3" json:"image,omitempty"`
 	Runtime *ContainerCreate_Runtime `protobuf:"bytes,3,opt,name=runtime,proto3" json:"runtime,omitempty"`
 }
@@ -79,9 +79,9 @@ func (*ContainerCreate) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_container_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *ContainerCreate) GetId() string {
+func (x *ContainerCreate) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -105,7 +105,7 @@ type ContainerUpdate struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id          string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID          string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Image       string            `protobuf:"bytes,2,opt,name=image,proto3" json:"image,omitempty"`
 	Labels      map[string]string `protobuf:"bytes,3,rep,name=labels,proto3" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	SnapshotKey string            `protobuf:"bytes,4,opt,name=snapshot_key,json=snapshotKey,proto3" json:"snapshot_key,omitempty"`
@@ -143,9 +143,9 @@ func (*ContainerUpdate) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_container_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *ContainerUpdate) GetId() string {
+func (x *ContainerUpdate) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -176,7 +176,7 @@ type ContainerDelete struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *ContainerDelete) Reset() {
@@ -211,9 +211,9 @@ func (*ContainerDelete) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_events_container_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *ContainerDelete) GetId() string {
+func (x *ContainerDelete) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

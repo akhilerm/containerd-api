@@ -43,7 +43,7 @@ type StartSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId  string         `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID  string         `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 	BundlePath string         `protobuf:"bytes,2,opt,name=bundle_path,json=bundlePath,proto3" json:"bundle_path,omitempty"`
 	Rootfs     []*types.Mount `protobuf:"bytes,3,rep,name=rootfs,proto3" json:"rootfs,omitempty"`
 	Options    *anypb.Any     `protobuf:"bytes,4,opt,name=options,proto3" json:"options,omitempty"`
@@ -81,9 +81,9 @@ func (*StartSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *StartSandboxRequest) GetSandboxId() string {
+func (x *StartSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -161,7 +161,7 @@ type StopSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId   string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID   string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 	TimeoutSecs uint32 `protobuf:"varint,2,opt,name=timeout_secs,json=timeoutSecs,proto3" json:"timeout_secs,omitempty"`
 }
 
@@ -197,9 +197,9 @@ func (*StopSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *StopSandboxRequest) GetSandboxId() string {
+func (x *StopSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -254,7 +254,7 @@ type UpdateSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId   string            `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID   string            `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 	Resources   *anypb.Any        `protobuf:"bytes,2,opt,name=resources,proto3" json:"resources,omitempty"`
 	Annotations map[string]string `protobuf:"bytes,3,rep,name=annotations,proto3" json:"annotations,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
@@ -291,9 +291,9 @@ func (*UpdateSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *UpdateSandboxRequest) GetSandboxId() string {
+func (x *UpdateSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -317,7 +317,7 @@ type WaitSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 }
 
 func (x *WaitSandboxRequest) Reset() {
@@ -352,9 +352,9 @@ func (*WaitSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *WaitSandboxRequest) GetSandboxId() string {
+func (x *WaitSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -457,7 +457,7 @@ type SandboxStatusRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 }
 
 func (x *SandboxStatusRequest) Reset() {
@@ -492,9 +492,9 @@ func (*SandboxStatusRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *SandboxStatusRequest) GetSandboxId() string {
+func (x *SandboxStatusRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -504,7 +504,7 @@ type PauseSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 }
 
 func (x *PauseSandboxRequest) Reset() {
@@ -539,9 +539,9 @@ func (*PauseSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *PauseSandboxRequest) GetSandboxId() string {
+func (x *PauseSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -589,7 +589,7 @@ type ResumeSandboxRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 }
 
 func (x *ResumeSandboxRequest) Reset() {
@@ -624,9 +624,9 @@ func (*ResumeSandboxRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *ResumeSandboxRequest) GetSandboxId() string {
+func (x *ResumeSandboxRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
@@ -674,7 +674,7 @@ type SandboxStatusResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id         string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID         string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Pid        uint32                 `protobuf:"varint,2,opt,name=pid,proto3" json:"pid,omitempty"`
 	State      string                 `protobuf:"bytes,3,opt,name=state,proto3" json:"state,omitempty"`
 	ExitStatus uint32                 `protobuf:"varint,4,opt,name=exit_status,json=exitStatus,proto3" json:"exit_status,omitempty"`
@@ -714,9 +714,9 @@ func (*SandboxStatusResponse) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{13}
 }
 
-func (x *SandboxStatusResponse) GetId() string {
+func (x *SandboxStatusResponse) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -761,7 +761,7 @@ type PingRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 }
 
 func (x *PingRequest) Reset() {
@@ -796,9 +796,9 @@ func (*PingRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_runtime_sandbox_v1_sandbox_proto_rawDescGZIP(), []int{14}
 }
 
-func (x *PingRequest) GetSandboxId() string {
+func (x *PingRequest) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }

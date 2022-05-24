@@ -42,7 +42,7 @@ type Platform struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Os           string `protobuf:"bytes,1,opt,name=os,proto3" json:"os,omitempty"`
+	OS           string `protobuf:"bytes,1,opt,name=os,proto3" json:"os,omitempty"`
 	Architecture string `protobuf:"bytes,2,opt,name=architecture,proto3" json:"architecture,omitempty"`
 	Variant      string `protobuf:"bytes,3,opt,name=variant,proto3" json:"variant,omitempty"`
 }
@@ -79,9 +79,9 @@ func (*Platform) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_types_platform_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Platform) GetOs() string {
+func (x *Platform) GetOS() string {
 	if x != nil {
-		return x.Os
+		return x.OS
 	}
 	return ""
 }

@@ -43,7 +43,7 @@ type Metric struct {
 	unknownFields protoimpl.UnknownFields
 
 	Timestamp *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Id        string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	ID        string                 `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
 	Data      *anypb.Any             `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
 }
 
@@ -86,9 +86,9 @@ func (x *Metric) GetTimestamp() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *Metric) GetId() string {
+func (x *Metric) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

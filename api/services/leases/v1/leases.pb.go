@@ -43,7 +43,7 @@ type Lease struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id        string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID        string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
 	Labels    map[string]string      `protobuf:"bytes,3,rep,name=labels,proto3" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
@@ -80,9 +80,9 @@ func (*Lease) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Lease) GetId() string {
+func (x *Lease) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -108,7 +108,7 @@ type CreateRequest struct {
 
 	// ID is used to identity the lease, when the id is not set the service
 	// generates a random identifier for the lease.
-	Id     string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID     string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Labels map[string]string `protobuf:"bytes,3,rep,name=labels,proto3" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
@@ -144,9 +144,9 @@ func (*CreateRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CreateRequest) GetId() string {
+func (x *CreateRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -210,7 +210,7 @@ type DeleteRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// Sync indicates that the delete and cleanup should be done
 	// synchronously before returning to the caller
 	//
@@ -250,9 +250,9 @@ func (*DeleteRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *DeleteRequest) GetId() string {
+func (x *DeleteRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -363,7 +363,7 @@ type Resource struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// For snapshotter resource, there are many snapshotter types here, like
 	// overlayfs, devmapper etc. The type will be formatted with type,
 	// like "snapshotter/overlayfs".
@@ -402,9 +402,9 @@ func (*Resource) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *Resource) GetId() string {
+func (x *Resource) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -421,7 +421,7 @@ type AddResourceRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID       string    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Resource *Resource `protobuf:"bytes,2,opt,name=resource,proto3" json:"resource,omitempty"`
 }
 
@@ -457,9 +457,9 @@ func (*AddResourceRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *AddResourceRequest) GetId() string {
+func (x *AddResourceRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -476,7 +476,7 @@ type DeleteResourceRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID       string    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Resource *Resource `protobuf:"bytes,2,opt,name=resource,proto3" json:"resource,omitempty"`
 }
 
@@ -512,9 +512,9 @@ func (*DeleteResourceRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *DeleteResourceRequest) GetId() string {
+func (x *DeleteResourceRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }
@@ -531,7 +531,7 @@ type ListResourcesRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ID string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *ListResourcesRequest) Reset() {
@@ -566,9 +566,9 @@ func (*ListResourcesRequest) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_services_leases_v1_leases_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *ListResourcesRequest) GetId() string {
+func (x *ListResourcesRequest) GetID() string {
 	if x != nil {
-		return x.Id
+		return x.ID
 	}
 	return ""
 }

@@ -45,7 +45,7 @@ type Sandbox struct {
 	unknownFields protoimpl.UnknownFields
 
 	// SandboxID is a unique instance identifier within namespace
-	SandboxId string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
+	SandboxID string `protobuf:"bytes,1,opt,name=sandbox_id,json=sandboxId,proto3" json:"sandbox_id,omitempty"`
 	// Runtime specifies which runtime to use for executing this container.
 	Runtime *Sandbox_Runtime `protobuf:"bytes,2,opt,name=runtime,proto3" json:"runtime,omitempty"`
 	// Spec is sandbox configuration (kin of OCI runtime spec), spec's data will be written to a config.json file in the
@@ -93,9 +93,9 @@ func (*Sandbox) Descriptor() ([]byte, []int) {
 	return file_github_com_containerd_containerd_api_api_types_sandbox_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Sandbox) GetSandboxId() string {
+func (x *Sandbox) GetSandboxID() string {
 	if x != nil {
-		return x.SandboxId
+		return x.SandboxID
 	}
 	return ""
 }
